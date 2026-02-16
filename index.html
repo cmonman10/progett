@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Antica trattoria Campari</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<script> document.addEventListener("DOMContentLoaded", function() { const input = document.getElementById("searchInput"); const paragraphs = document.querySelectorAll(".sidebar-menu .extra-text p"); function clearHighlights() { paragraphs.forEach(p => { p.innerHTML = p.textContent; }); } function highlightWords(element, words) { let text = element.textContent; words.forEach(word => { const regex = new RegExp("(" + word + ")", "gi"); text = text.replace(regex, '<span class="highlight">$1</span>'); }); element.innerHTML = text; } input.addEventListener("input", function() { const value = input.value.toLowerCase().trim(); const words = value.split(/\s+/).filter(w => w.length > 0); clearHighlights(); if (words.length === 0) { paragraphs.forEach(p => p.style.display = ""); return; } paragraphs.forEach(p => { const text = p.textContent.toLowerCase(); const match = words.every(word => text.includes(word)); if (match) { p.style.display = ""; highlightWords(p, words); } else { p.style.display = "none"; } }); }); });
+ </script>
+<body>
+    <header class="bello-header">
+        <div class="header-left">
+            <div class="logo-container">
+                <img src="immagini/1000015052.jpg" alt="Logo" class="logo">
+            </div>
+        </div>
+        <div class="header-center">
+            <span class="header-text">
+                Il sapore della tradizione cremasca
+            </span>
+        </div>
+        <div class="header-right">
+            <form class="search-bar" onsubmit="return false;">
+                 <input type="text" id="searchInput" placeholder="Cerca il tuo piatto preferito">
+                 <button type="submit">🔍</button>
+            </form>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <details id="menu">
+                <summary>Menu</summary>
+                <ul>
+                    <li><a href="#oca">Oca</a></li>
+                    <li><a href="#asino">Asina</a></li>
+                    <li><a href="#cinghiale">Cinghiale</a></li>
+                    <li><a href="#lepre">Lepre</a></li>
+                    <li><a href="#bolliti">Bolliti</a></li>
+                    <li><a href="#capriolo">Capriolo</a></li>
+                    <li><a href="#cervo">Cervo</a></li>
+                </ul>
+                </details>
+
+                <details id="bevande">
+                <summary>Bevande</summary>
+                <ul>
+                    <li><a href="#vini-rossi">Vini rossi</a></li>
+                    <li><a href="#vini-bianchi">Vini bianchi</a></li>
+                    <li><a href="#analcolici">Bevande analcoliche</a></li>
+                </ul>
+                </details>
+
+        </nav>
+
+    </aside>
+    <aside class="sidebar-extra">
+        <div class="extra-logo">
+            <img src="immagini/1000015052.jpg" alt="logo-extra">
+        </div>
+        <div class="extra-text">
+            <p>Benvenuti nella nostra trattoria!</p>
+            <p>Scopri i piatti tipici della tradizione cremasca.</p>
+            <p>Vieni a trovarci per un’esperienza indimenticabile dal 1893.</p>
+            
+            <p><a href="mailto: antica@gmail.com" id="a-sidebar">La nostra mail per maggiori informazioni</a></p>
+            <p><a href="telto: +391234567890" id="a-sidebar">Il nostro numero di telefono</a></p>
+        </div>
+        <br>
+        <div class="social-buttons">
+    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+</a>
+</div>
+    </aside>
+    <aside class="sidebar-menu">
+        <div class="extra-text">
+        
+    <h1 id="menu-principale">Menù</h1>
+        <br>
+            <h2>I BRASATI</h2>
+        <br>
+    <h3 id="cinghiale">Il Cinghiale – 30,00 € </h3>
+        <br>
+            <p>Tagliatelle al ragù di cinghiale</p>
+            <p>Stracotto (Brasato) di cinghiale con polenta, zola dolce e patate rosse di Colfiorito</p>
+            <p>Scaglie di “Bella Lodi”</p>
+            <br>
+
+    <h3 id="asino">L’Asina – 30,00 €</h3>
+        <br>
+            <p>Tagliatelle al ragù di asina</p>
+            <p>Stracotto (Brasato) di asina con polenta, zola dolce e patate rosse di Colfiorito</p>
+            <p>Scaglie di “Bella Lodi”</p>
+        <br>
+    
+    <h3 id="cervo">Il Cervo – 30,00 €</h3>
+        <br>
+            <p>Tagliatelle al ragù di cervo</p>
+            <p>Stracotto (Brasato) di cervo con polenta, zola dolce e patate rosse di Colfiorito</p>
+            <p>Scaglie di “Bella Lodi”</p>
+        <br>
+
+    <h2>LA CASCINA</h1>
+        <br>
+
+    <h3 id="oca">L’Oca – 30,00 €</h3>
+        <br>
+            <p>Ciccioli d’Oca (Gratù)</p>
+            <p>Fegato d’Oca al salto</p>
+            <p>Bracioline (Brisole) di petto d’Oca</p>
+            <p>Cassoela d’Oca con le verze</p>
+            <p>Il tutto accompagnato con polenta e zola dolce</p>
+            <p>Scaglie di “Bella Lodi”</p>
+        <br>
+
+   <h3 id="bolliti">Il Bollito – 30,00 €</h3>
+        <br>
+            <p>Ravioli in brodo di gallina</p>
+            <p>Cotechino con purea, gallina lessata, lingua di vitello e biancostato con Mostarda di Cremona, salsa verde e pepite di verze</p>
+            <p>Scaglie di “Bella Lodi”</p>
+        <br>
+    
+    <h2>I SALMÌ</h2>
+        <br>
+    
+    <h3 id="lepre">La Lepre – 30,00 €</h3>
+        <br>
+            <p>Tagliatelle al sugo di lepre</p>
+            <p>Lepre in salmì con polenta, zola dolce e patate rosse di Colfiorito</p>
+            <p>Scaglie di “Bella Lodi”</p>
+        <br>
+    
+    <h3 id="capriolo">Il Capriolo – 30,00 €</h3>
+        <br>
+            <p>Tagliatelle al sugo di capriolo</p>
+            <p>Capriolo in salmì con polenta, zola dolce e patate rosse di Colfiorito</p>
+            <p>Scaglie di “Bella Lodi”</p>
+        <br>
+
+    <h1 id="bevande-titolo">Bevande</h1>
+        <br>
+
+    <h2 id="vini-rossi">Vini rossi</h2>
+        <br>
+            <p>Gutturnio fermo</p>
+            <p>Gutturnio frizzante</p>
+            <p>Valpolicella</p>
+            <p>Ripasso</p>
+            <p>Amarone</p>
+            <p>Montepulciano</p>
+        <br>
+
+    <h2 id="vini-bianchi">Vini bianchi</h2>
+        <br>
+            <p>Prosecco DOC</p>
+            <p>Ca' de bosco</p>
+            <p>Muller Thurgau</p>
+            <p>Ribolla Gialla</p>
+            <p>Ortrugo</p>
+        <br>
+
+    <h2 id="analcolici">Bevande analcoliche</h2>
+        <br>
+            <p>Acqua Naturale e Frizzante</p>
+            <p>Coca Cola</p>
+            <p>Fanta</p>
+            <p>Sprite</p>
+            <p>Estathè</p>
+            <p>Succo di frutta</p>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        </div>
+    </aside>
+</body>
+</html>
+
